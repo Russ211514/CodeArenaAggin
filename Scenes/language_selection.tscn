@@ -1,0 +1,240 @@
+[gd_scene load_steps=17 format=3 uid="uid://b5o4m6owhghmd"]
+
+[ext_resource type="Texture2D" uid="uid://c21kxv2b75xcw" path="res://Arts/bground.png" id="1_a1ci6"]
+[ext_resource type="Script" uid="uid://ygrv4sxb6d0l" path="res://Scripts/language_selection.gd" id="1_rmp5t"]
+[ext_resource type="FontFile" uid="uid://k6eislu03nr7" path="res://VCR_OSD_MONO_1.001.ttf" id="2_rmp5t"]
+[ext_resource type="FontFile" uid="uid://b7bitc51u2r1i" path="res://Arts/VCR_OSD_MONO_1.001.ttf" id="3_mh13m"]
+[ext_resource type="Texture2D" uid="uid://cgen1vnp3nq42" path="res://Arts/html_selection.png" id="4_vw5r5"]
+[ext_resource type="Texture2D" uid="uid://bl4bd0yl1dtnd" path="res://Arts/python_selection.png" id="5_pw41t"]
+[ext_resource type="Texture2D" uid="uid://lomxgwdknsa1" path="res://Arts/java_selection.png" id="6_7utcq"]
+[ext_resource type="Texture2D" uid="uid://x0q2umhmu0yo" path="res://Arts/stonebutton.png" id="7_6iylh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7hwem"]
+texture = ExtResource("1_a1ci6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eebo5"]
+texture = ExtResource("4_vw5r5")
+expand_margin_left = 40.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(83.49765, 26.715334, 153.01443, 37.617798)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jt00l"]
+texture = ExtResource("5_pw41t")
+expand_margin_left = 40.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(83.498, 26.715, 153.014, 37.649387)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ukw7i"]
+texture = ExtResource("6_7utcq")
+expand_margin_left = 40.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(83.498, 26.715, 153.014, 37.649)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3m2d"]
+texture = ExtResource("7_6iylh")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pr5ga"]
+texture = ExtResource("7_6iylh")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3uxx3"]
+texture = ExtResource("7_6iylh")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jafxn"]
+texture = ExtResource("7_6iylh")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[node name="Language Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmp5t")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7hwem")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -498.26086
+offset_top = 1.0
+offset_right = 497.73914
+offset_bottom = 256.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_rmp5t")
+theme_override_font_sizes/font_size = 85
+text = "SELECT YOUR LANGUAGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5
+offset_top = -51.0
+offset_right = 74.5
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="HTML" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_mh13m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_eebo5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eebo5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eebo5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_eebo5")
+text = "HTML"
+
+[node name="PYTHON" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_mh13m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_jt00l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jt00l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jt00l")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_jt00l")
+text = "PYTHON"
+
+[node name="JAVA" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_mh13m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_ukw7i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ukw7i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ukw7i")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ukw7i")
+text = "JAVA"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 922.0
+offset_top = -104.0
+offset_right = 1063.0
+offset_bottom = -73.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_rmp5t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_j3m2d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pr5ga")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j3m2d")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_j3m2d")
+text = "BACK"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 90.0
+offset_top = -104.0
+offset_right = 231.0
+offset_bottom = -73.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_rmp5t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_3uxx3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jafxn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3uxx3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_3uxx3")
+text = "SETTINGS"
+
+[connection signal="pressed" from="VBoxContainer/HTML" to="." method="_on_html_pressed"]
+[connection signal="pressed" from="VBoxContainer/PYTHON" to="." method="_on_python_pressed"]
+[connection signal="pressed" from="VBoxContainer/JAVA" to="." method="_on_java_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

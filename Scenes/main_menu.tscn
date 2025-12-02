@@ -1,0 +1,188 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx1bj5gbjbe2j"]
+
+[ext_resource type="Texture2D" uid="uid://c21kxv2b75xcw" path="res://Arts/bground.png" id="1_1ehe0"]
+[ext_resource type="Script" uid="uid://x1ylqup2qtij" path="res://Scripts/main_menu.gd" id="1_ce3w2"]
+[ext_resource type="FontFile" uid="uid://k6eislu03nr7" path="res://VCR_OSD_MONO_1.001.ttf" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://x0q2umhmu0yo" path="res://Arts/stonebutton.png" id="3_n45e2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
+texture = ExtResource("1_1ehe0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cp0ys"]
+texture = ExtResource("3_n45e2")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ce3w2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_opfnp")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -439.76086
+offset_top = 1.0
+offset_right = 439.23914
+offset_bottom = 256.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_ce3w2")
+theme_override_font_sizes/font_size = 150
+text = "CODE ARENA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = -61.0
+offset_right = 106.5
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_ce3w2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_cp0ys")
+text = "PLAY"
+
+[node name="OfflineButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_ce3w2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_cp0ys")
+text = "OFFLINE"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_ce3w2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_cp0ys")
+text = "OPTIONS"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 90.0
+offset_top = -104.0
+offset_right = 231.0
+offset_bottom = -73.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_ce3w2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_cp0ys")
+text = "SETTINGS"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 920.0
+offset_top = -104.0
+offset_right = 1061.0
+offset_bottom = -73.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_ce3w2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_cp0ys")
+text = "EXIT
+"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OfflineButton" to="." method="_on_offline_button_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

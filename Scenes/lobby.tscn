@@ -1,0 +1,279 @@
+[gd_scene load_steps=19 format=3 uid="uid://c4omgvfygumg3"]
+
+[ext_resource type="Script" uid="uid://bk6mh0ihlrurt" path="res://Scripts/lobby.gd" id="1_bvheq"]
+[ext_resource type="Texture2D" uid="uid://c21kxv2b75xcw" path="res://Arts/bground.png" id="2_aghey"]
+[ext_resource type="FontFile" uid="uid://k6eislu03nr7" path="res://VCR_OSD_MONO_1.001.ttf" id="3_o08vn"]
+[ext_resource type="Texture2D" uid="uid://dmg4abpidec6r" path="res://Arts/host_join_game_panel.png" id="4_1updj"]
+[ext_resource type="FontFile" uid="uid://b7bitc51u2r1i" path="res://Arts/VCR_OSD_MONO_1.001.ttf" id="5_5ndqc"]
+[ext_resource type="Texture2D" uid="uid://lpogd0oy10y8" path="res://Arts/host_game_button.png" id="6_gdlty"]
+[ext_resource type="Texture2D" uid="uid://7wth4sggnbpb" path="res://Arts/join_game_button.png" id="7_jjrc4"]
+[ext_resource type="Texture2D" uid="uid://x0q2umhmu0yo" path="res://Arts/stonebutton.png" id="8_pvv31"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sqxuf"]
+texture = ExtResource("2_aghey")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a2vla"]
+texture = ExtResource("4_1updj")
+region_rect = Rect2(66.75186, 16.67677, 186.48715, 146.38249)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfaul"]
+texture = ExtResource("6_gdlty")
+expand_margin_left = 100.0
+expand_margin_top = 10.0
+expand_margin_right = 100.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(84.701416, 31.88145, 150.88702, 31.248672)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0f3vc"]
+texture = ExtResource("7_jjrc4")
+expand_margin_left = 100.0
+expand_margin_top = 10.0
+expand_margin_right = 100.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(84.701, 31.881, 150.887, 31.249)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bbmoa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jmuv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ngni"]
+texture = ExtResource("8_pvv31")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbbk6"]
+texture = ExtResource("8_pvv31")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_og020"]
+texture = ExtResource("8_pvv31")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ic8vi"]
+texture = ExtResource("8_pvv31")
+expand_margin_left = 15.0
+expand_margin_top = 10.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(67, 53.5, 186, 73)
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bvheq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sqxuf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -439.76086
+offset_top = 1.0
+offset_right = 439.23914
+offset_bottom = 256.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_o08vn")
+theme_override_font_sizes/font_size = 105
+text = "CUSTOM MATCH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GamePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -132.0
+offset_right = 262.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_a2vla")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GamePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.5
+offset_top = -133.5
+offset_right = 131.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="HostGame" type="Button" parent="GamePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_disabled_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_disabled_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_5ndqc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_xfaul")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xfaul")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xfaul")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xfaul")
+text = "HOST GAME"
+
+[node name="JoinGame" type="Button" parent="GamePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_disabled_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_focus_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/icon_disabled_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_5ndqc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_0f3vc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0f3vc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0f3vc")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0f3vc")
+text = "JOIN GAME"
+
+[node name="HostIP" type="LineEdit" parent="GamePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = 40.5
+offset_right = 181.0
+offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_5ndqc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bbmoa")
+placeholder_text = "Enter Host IP..."
+
+[node name="RoomIP" type="LineEdit" parent="GamePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = 92.5
+offset_right = 181.0
+offset_bottom = 123.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8392157, 0.7254902, 0.5294118, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_5ndqc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4jmuv")
+placeholder_text = "Enter IP..."
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 922.0
+offset_top = -104.0
+offset_right = 1063.0
+offset_bottom = -73.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_o08vn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ngni")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wbbk6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3ngni")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_3ngni")
+text = "BACK"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 90.0
+offset_top = -104.0
+offset_right = 231.0
+offset_bottom = -73.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.7019608, 0.2627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_o08vn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_og020")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ic8vi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_og020")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_og020")
+text = "SETTINGS"
+
+[connection signal="pressed" from="GamePanel/VBoxContainer/HostGame" to="." method="_on_host_game_pressed"]
+[connection signal="pressed" from="GamePanel/VBoxContainer/JoinGame" to="." method="_on_join_game_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
