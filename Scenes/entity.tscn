@@ -1,0 +1,153 @@
+[gd_scene load_steps=22 format=3 uid="uid://bs11q455csqvj"]
+
+[ext_resource type="Script" uid="uid://7h1c051yxa5k" path="res://Scripts/entity.gd" id="1_egtqx"]
+[ext_resource type="Script" uid="uid://dcjs3nc3unb7i" path="res://Scripts/attack_node.gd" id="2_8y38c"]
+[ext_resource type="Script" uid="uid://cmys3mdqy6p1i" path="res://Scripts/health_node.gd" id="3_untvt"]
+[ext_resource type="Texture2D" uid="uid://cpwbbhp7gyh4f" path="res://Arts/Sprites/Shinobi/Attack_1.png" id="4_78o27"]
+[ext_resource type="Texture2D" uid="uid://bvhp2si7r0llu" path="res://Arts/Sprites/Shinobi/Hurt.png" id="5_7xvw2"]
+[ext_resource type="Texture2D" uid="uid://dkjnnnklmjnwe" path="res://Arts/Sprites/Shinobi/Idle.png" id="6_ckh86"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohi6s"]
+atlas = ExtResource("4_78o27")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn1fk"]
+atlas = ExtResource("4_78o27")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luxbn"]
+atlas = ExtResource("4_78o27")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pup0"]
+atlas = ExtResource("4_78o27")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sktc"]
+atlas = ExtResource("4_78o27")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jph6c"]
+atlas = ExtResource("5_7xvw2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ugxh"]
+atlas = ExtResource("5_7xvw2")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xcab"]
+atlas = ExtResource("6_ckh86")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qitvj"]
+atlas = ExtResource("6_ckh86")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxewr"]
+atlas = ExtResource("6_ckh86")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvqyd"]
+atlas = ExtResource("6_ckh86")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlkmr"]
+atlas = ExtResource("6_ckh86")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ognag"]
+atlas = ExtResource("6_ckh86")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c8b0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohi6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn1fk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luxbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pup0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sktc")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jph6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ugxh")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xcab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qitvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxewr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvqyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlkmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ognag")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78o27"]
+bg_color = Color(0.6, 1, 0, 1)
+
+[node name="Entity" type="Control" node_paths=PackedStringArray("HealthNode", "AttackNode")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_egtqx")
+HealthNode = NodePath("HealthNode")
+AttackNode = NodePath("AttackNode")
+
+[node name="AttackNode" type="Node" parent="."]
+script = ExtResource("2_8y38c")
+
+[node name="HealthNode" type="Node" parent="."]
+script = ExtResource("3_untvt")
+
+[node name="EntitySprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(130, 354)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_c8b0y")
+animation = &"attack"
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 287.0
+offset_right = 202.0
+offset_bottom = 314.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_78o27")
+max_value = 1.0
+value = 1.0
+
+[connection signal="animation_finished" from="EntitySprite" to="." method="_on_entity_sprite_animation_finished"]

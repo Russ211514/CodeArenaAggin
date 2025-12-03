@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3qpth70tog6s"]
+
+[ext_resource type="Script" uid="uid://cgcguuce4b5co" path="res://Scripts/main_outer.gd" id="1_5ki4d"]
+[ext_resource type="Texture2D" uid="uid://c21kxv2b75xcw" path="res://Arts/bground.png" id="2_7qq1l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vh8cd"]
+texture = ExtResource("2_7qq1l")
+
+[node name="MainOuter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ki4d")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vh8cd")

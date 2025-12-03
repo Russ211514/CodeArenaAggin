@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://clqwn32dxfdlg"]
+
+[ext_resource type="Script" uid="uid://c54y5efeyg1eq" path="res://Entity_resource.gd" id="1_352uf"]
+[ext_resource type="Resource" uid="uid://7cpvti2gdcq1" path="res://Skills/Attack.tres" id="1_hurjp"]
+[ext_resource type="Resource" uid="uid://bqr2xd0lat3r2" path="res://Skills/S_Attack.tres" id="2_3en1u"]
+
+[resource]
+script = ExtResource("1_352uf")
+MobName = "Slime"
+MaxHP = 25.0
+Str = 3
+Dex = 3
+Int = 3
+Skills = Array[Resource]([ExtResource("1_hurjp"), ExtResource("2_3en1u")])
