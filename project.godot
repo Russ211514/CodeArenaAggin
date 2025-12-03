@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 Noray="*res://addons/netfox.noray/noray.gd"
 PacketHandshake="*res://addons/netfox.noray/packet-handshake.gd"
 NetworkHandler="*res://Scripts/network_handler.gd"
+PlayerStats="*res://PlayerStats.gd"
 
 [editor_plugins]
 

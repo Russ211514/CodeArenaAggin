@@ -234,4 +234,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_vfry7")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_vfry7")
 text = "SETTINGS"
 
+[connection signal="pressed" from="VBoxContainer/HTML" to="." method="_on_html_pressed"]
+[connection signal="pressed" from="VBoxContainer/PYTHON" to="." method="_on_python_pressed"]
+[connection signal="pressed" from="VBoxContainer/JAVA" to="." method="_on_java_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
